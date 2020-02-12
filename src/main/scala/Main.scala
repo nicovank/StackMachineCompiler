@@ -347,12 +347,15 @@ object CodeGenerator {
 
 object Main {
   def main(args: Array[String]): Unit = {
-    val source: Source = Source.fromFile("test.smp")
-    val parser: Parser = new Parser(source.mkString)
-    source.close()
+    if (args.length != 1) println("Please provide exactly one file to compile.")
+    else {
+        val source: Source = Source.fromFile(args(0))
+        val parser: Parser = new Parser(source.mkString)
+        source.close()
 
-    val program: Program = parser.parseProgram()
+        val program: Program = parser.parseProgram()
 
-    CodeGenerator.generateProgram(program, new PrintWriter(System.out))
+        CodeGenerator.generateProgram(program, new PrintWriter(System.out))
+      }
   }
 }
