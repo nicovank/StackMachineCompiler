@@ -1,6 +1,6 @@
 # StackMachineCompiler
 
-This project provides a simple compiler to compile from a elemtary language to the
+This project provides a compiler to compile from a simple language to the
 [StackMachine](https://danielschlegel.org/wp/teaching/csc344-spring-2020/assignment-1/) language. I wrote this program
 to make it easier to generate test cases for students.
 
