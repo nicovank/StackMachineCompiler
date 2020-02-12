@@ -25,7 +25,7 @@ Quark      :- Literal
 Quark      :- 'IN'
 
 Register   :- '$' [0-9A-F][0-9A-F]
-Literal    :- [1-9][0-9]*
+Literal    :- '0' | ([1-9][0-9]*)
 ```
 
 ## Example
